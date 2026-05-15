@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>crafted_by_nf</title>
+  <meta name="description" content="Instagram-Profil crafted_by_nf" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Arial, Helvetica, sans-serif;
+      background: radial-gradient(circle at center, #ffffff 0%, #f5eee8 45%, #ebe2da 100%);
+      color: #111;
+    }
+
+    .card {
+      width: min(90vw, 520px);
+      padding: 72px 42px 58px;
+      text-align: center;
+      background: #ffffff;
+      border: 1px solid #e7ded6;
+      border-radius: 34px;
+      box-shadow: 0 30px 90px rgba(80, 60, 45, 0.16);
+    }
+
+    .logo {
+      width: 225px;
+      height: 225px;
+      margin: 0 auto 34px;
+      display: block;
+      object-fit: contain;
+    }
+
+    h1 {
+      margin: 0 0 14px;
+      font-size: clamp(34px, 7vw, 48px);
+      line-height: 1.08;
+      font-weight: 800;
+      letter-spacing: -1.5px;
+    }
+
+    p {
+      margin: 0 0 36px;
+      color: #666;
+      font-size: clamp(20px, 4vw, 28px);
+      line-height: 1.25;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 64px;
+      padding: 0 42px;
+      border-radius: 999px;
+      background: #17120f;
+      color: #ffffff;
+      font-size: 24px;
+      font-weight: 800;
+      text-decoration: none;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.18), 0 12px 26px rgba(0,0,0,0.16);
+      transition: transform 160ms ease, box-shadow 160ms ease;
+    }
+
+    .button:hover,
+    .button:focus-visible {
+      transform: translateY(-2px);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.18), 0 16px 34px rgba(0,0,0,0.22);
+      outline: none;
+    }
+
+    @media (max-width: 520px) {
+      .card {
+        padding: 48px 24px 42px;
+        border-radius: 28px;
+      }
+
+      .logo {
+        width: 180px;
+        height: 180px;
+        margin-bottom: 28px;
+      }
+
+      .button {
+        min-height: 56px;
+        padding: 0 32px;
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <img class="logo" src="logo.jpg" alt="crafted_by_nf Logo" />
+
+    <h1>@crafted_by_nf</h1>
+    <p>Instagram-Profil öffnen</p>
+
+    <a class="button" href="https://www.instagram.com/crafted_by_nf/" target="_blank" rel="noopener noreferrer">
+      Zum Profil
+    </a>
+  </main>
+</body>
+</html>
