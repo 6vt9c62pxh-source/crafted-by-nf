@@ -16,14 +16,17 @@
       box-sizing: border-box;
     }
 
-    html {
+    html,
+    body {
       min-height: 100%;
     }
 
     body {
       margin: 0;
+      min-height: 100svh;
+      display: grid;
+      place-items: center;
       padding: 20px;
-      min-height: 100vh;
       font-family: Arial, Helvetica, sans-serif;
       background: #c8deb6;
       color: #111;
@@ -31,93 +34,116 @@
 
     .card {
       width: min(100%, 1000px);
-      margin: 0 auto;
-      padding: 24px;
+      padding: 34px 32px 30px;
+      text-align: center;
       background: #ffffff;
       border: 1px solid #e7ded6;
-      border-radius: 24px;
-      box-shadow: 0 15px 45px rgba(80, 60, 45, 0.12);
+      border-radius: 32px;
+      box-shadow: 0 28px 80px rgba(80, 60, 45, 0.16);
     }
 
     .logo {
       width: 180px;
+      height: 180px;
+      margin: 0 auto 18px;
       display: block;
-      margin: 0 auto 20px;
+      object-fit: contain;
     }
 
     h1 {
-      text-align: center;
-      margin: 0 0 10px;
-      font-size: clamp(26px, 5vw, 38px);
+      margin: 0 0 12px;
+      font-size: clamp(30px, 5vw, 38px);
+      line-height: 1.05;
+      font-weight: 800;
+      letter-spacing: -1px;
     }
 
     .intro {
-      text-align: center;
+      margin: 0 0 24px;
       color: #555;
-      margin-bottom: 24px;
+      font-size: 17px;
       line-height: 1.5;
     }
 
-    .actions {
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-bottom: 20px;
+    .viewer {
+      display: block;
+      width: 100%;
+      height: 78vh;
+      min-height: 500px;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      background: #f7f7f7;
     }
-    
 
-.button-group {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  align-items: center;
-}
+    .fallback {
+      margin: 20px 0 0;
+      color: #555;
+      font-size: 14px;
+      line-height: 1.5;
+    }
 
-.button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  max-width: 320px;
-  min-height: 58px;
-  margin: 0;
-  padding: 0 36px;
-  border-radius: 999px;
-  background: #BFC3C7;
-  color: #ffffff;
-  font-size: clamp(19px, 5vw, 23px);
-  font-weight: 800;
-  text-decoration: none;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.18),
-              0 12px 26px rgba(0,0,0,0.16);
-  transition: transform 160ms ease, box-shadow 160ms ease;
-}
+    .button-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      width: 100%;
+      margin-top: 20px;
+    }
 
-.button:hover,
-.button:focus-visible {
-  transform: translateY(-2px);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.18),
-              0 16px 34px rgba(0,0,0,0.22);
-  outline: none;
-}
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      max-width: 320px;
+      min-height: 58px;
+      margin: 0;
+      padding: 0 36px;
+      border: none;
+      border-radius: 999px;
+      background: #BFC3C7;
+      color: #ffffff;
+      font-size: clamp(19px, 5vw, 23px);
+      font-weight: 800;
+      text-align: center;
+      text-decoration: none;
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.18),
+        0 12px 26px rgba(0,0,0,0.16);
+      transition: transform 160ms ease,
+                  box-shadow 160ms ease;
+    }
 
-@media (max-width: 600px) {
-  .button {
-    min-height: 54px;
-    padding: 0 30px;
-  }
-}
+    .button:hover,
+    .button:focus-visible {
+      transform: translateY(-2px);
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.18),
+        0 16px 34px rgba(0,0,0,0.22);
+      outline: none;
+    }
 
+    @media (max-width: 600px) {
+      body {
+        padding: 16px;
+        display: block;
+      }
 
       .card {
-        padding: 16px;
-        border-radius: 18px;
+        width: 100%;
+        padding: 28px 22px 26px;
+        border-radius: 28px;
       }
 
       .logo {
         width: 85px;
         height: 85px;
+        margin-bottom: 18px;
+      }
+
+      h1 {
+        font-size: clamp(30px, 8vw, 38px);
       }
 
       .viewer {
@@ -125,28 +151,35 @@
         min-height: 400px;
       }
 
-      .actions {
-        flex-direction: column;
-      }
-
       .button {
         min-height: 54px;
         padding: 0 30px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .button {
+        transition: none;
       }
     }
   </style>
 </head>
 
 <body>
+
   <main class="card">
 
-    <img class="logo" src="logo.png" alt="Crafted by N.F.">
+    <img
+      class="logo"
+      src="logo.png"
+      alt="Crafted by N.F.">
 
     <h1>Produktkatalog</h1>
 
     <p class="intro">
       Entdecke meine handgemachten Produkte.
     </p>
+
     <iframe
       class="viewer"
       src="produktkatalog.pdf?v=1#view=FitH"
@@ -160,6 +193,7 @@
     </p>
 
     <div class="button-group">
+
       <a
         class="button"
         href="produktkatalog.pdf?v=1"
@@ -174,19 +208,23 @@
         download="Crafted-by-NF-Produktkatalog.pdf">
         PDF herunterladen
       </a>
-    </div>
 
-    <a class="button" href="index.html">
-      Zurück zur Startseite
-    </a>
+      <a
+        class="button"
+        href="index.html">
+        Zurück zur Startseite
+      </a>
+
+    </div>
 
   </main>
 
   <script
     data-goatcounter="https://craftedbynf.goatcounter.com/count"
     async
-    src="//gc.zgo.at/count.js">
+    src="https://gc.zgo.at/count.js">
   </script>
+
 </body>
 </html>
 
