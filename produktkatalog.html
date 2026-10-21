@@ -66,72 +66,49 @@
       margin-bottom: 20px;
     }
     
- .button-group {
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-      align-items: center;
-    }
-    
-    .button {
+
+.button-group {
   display: flex;
+  flex-direction: column;
+  gap: 14px;
   align-items: center;
-  justify-content: center;
-  width: fit-content;
-  margin: 30px auto 0;
-  min-height: 54px;
-  padding: 0 30px;
-  border-radius: 999px;
-  background: #BFC3C7;
-  color: #fff;
-  font-weight: 700;
-  text-decoration: none;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.18),
-              0 12px 26px rgba(0,0,0,.16);
 }
 
-    .button:hover,
-    .button:focus-visible {
-      transform: translateY(-2px);
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.18),
-                  0 16px 34px rgba(0,0,0,0.22);
-      outline: none;
-    }
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 320px;
+  min-height: 58px;
+  margin: 0;
+  padding: 0 36px;
+  border-radius: 999px;
+  background: #BFC3C7;
+  color: #ffffff;
+  font-size: clamp(19px, 5vw, 23px);
+  font-weight: 800;
+  text-decoration: none;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.18),
+              0 12px 26px rgba(0,0,0,0.16);
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
 
-    .viewer {
-      display: block;
-      width: 100%;
-      height: 78vh;
-      min-height: 500px;
-      border: 1px solid #ddd;
-      border-radius: 12px;
-      background: #f7f7f7;
-    }
+.button:hover,
+.button:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.18),
+              0 16px 34px rgba(0,0,0,0.22);
+  outline: none;
+}
 
-    .fallback {
-      text-align: center;
-      font-size: 14px;
-      line-height: 1.5;
-      color: #555;
-      margin-top: 14px;
-    }
+@media (max-width: 600px) {
+  .button {
+    min-height: 54px;
+    padding: 0 30px;
+  }
+}
 
-    .back {
-      display: block;
-      text-align: center;
-      margin-top: 24px;
-      color: #555;
-      text-decoration: none;
-    }
-
-    .back:hover {
-      text-decoration: underline;
-    }
-
-    @media (max-width: 600px) {
-      body {
-        padding: 10px;
-      }
 
       .card {
         padding: 16px;
