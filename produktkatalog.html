@@ -147,9 +147,13 @@
   }
 
     .viewer {
+    display: block;
     width: 100%;
     height: 68vh;
     min-height: 400px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background: #f7f7f7;
   }
 
   .button {
@@ -181,12 +185,12 @@
       Entdecke meine handgemachten Produkte.
     </p>
 
-    <iframe
-      class="viewer"
-      src="produktkatalog.pdf?v=1#view=Fit"
-      title="Aktueller Produktkatalog von Crafted by N.F."
-      loading="eager">
-    </iframe>
+<iframe
+  class="viewer"
+  src="produktkatalog.pdf?v=1#zoom=page-width"
+  title="Aktueller Produktkatalog von Crafted by N.F."
+  loading="eager">
+</iframe>
 
     <p class="fallback">
       Falls der Katalog nicht angezeigt wird, nutze
