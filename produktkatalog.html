@@ -1,1 +1,207 @@
 
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Produktkatalog | Crafted by N.F.</title>
+  <meta name="description"
+        content="Entdecke die handgemachten Produkte von Crafted by N.F.">
+
+  <meta name="theme-color" content="#c8deb6">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      min-height: 100%;
+    }
+
+    body {
+      margin: 0;
+      padding: 20px;
+      min-height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #c8deb6;
+      color: #111;
+    }
+
+    .card {
+      width: min(100%, 1000px);
+      margin: 0 auto;
+      padding: 24px;
+      background: #ffffff;
+      border: 1px solid #e7ded6;
+      border-radius: 24px;
+      box-shadow: 0 15px 45px rgba(80, 60, 45, 0.12);
+    }
+
+    .logo {
+      display: block;
+      width: 110px;
+      height: 110px;
+      object-fit: contain;
+      margin: 0 auto 12px;
+    }
+
+    h1 {
+      text-align: center;
+      margin: 0 0 10px;
+      font-size: clamp(26px, 5vw, 38px);
+    }
+
+    .intro {
+      text-align: center;
+      color: #555;
+      margin-bottom: 24px;
+      line-height: 1.5;
+    }
+
+    .actions {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 12px 22px;
+      border-radius: 999px;
+      background: #8ca65f;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .button:hover,
+    .button:focus-visible {
+      background: #71894a;
+      outline: 2px solid #71894a;
+      outline-offset: 3px;
+    }
+
+    .viewer {
+      display: block;
+      width: 100%;
+      height: 78vh;
+      min-height: 500px;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      background: #f7f7f7;
+    }
+
+    .fallback {
+      text-align: center;
+      font-size: 14px;
+      line-height: 1.5;
+      color: #555;
+      margin-top: 14px;
+    }
+
+    .back {
+      display: block;
+      text-align: center;
+      margin-top: 24px;
+      color: #555;
+      text-decoration: none;
+    }
+
+    .back:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 10px;
+      }
+
+      .card {
+        padding: 16px;
+        border-radius: 18px;
+      }
+
+      .logo {
+        width: 85px;
+        height: 85px;
+      }
+
+      .viewer {
+        height: 68vh;
+        min-height: 400px;
+      }
+
+      .actions {
+        flex-direction: column;
+      }
+
+      .button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="card">
+
+    <img class="logo" src="logo.png" alt="Crafted by N.F.">
+
+    <h1>Unser Produktkatalog</h1>
+
+    <p class="intro">
+      Entdecke unsere handgemachten Produkte.
+      Preise und Verfügbarkeit findest du in unserem aktuellen Katalog.
+    </p>
+
+    <div class="actions">
+      <a
+        class="button"
+        href="produktkatalog.pdf?v=1"
+        target="_blank"
+        rel="noopener noreferrer">
+        Katalog separat öffnen
+      </a>
+
+      <a
+        class="button"
+        href="produktkatalog.pdf?v=1"
+        download="Crafted-by-NF-Produktkatalog.pdf">
+        PDF herunterladen
+      </a>
+    </div>
+
+    <iframe
+      class="viewer"
+      src="produktkatalog.pdf?v=1#view=FitH"
+      title="Aktueller Produktkatalog von Crafted by N.F."
+      loading="eager">
+    </iframe>
+
+    <p class="fallback">
+      Falls der Katalog nicht angezeigt wird, nutze
+      „Katalog separat öffnen“ oder „PDF herunterladen“.
+    </p>
+
+    <a class="back" href="index.html">
+      Zurück zur Startseite
+    </a>
+
+  </main>
+
+  <script
+    data-goatcounter="https://craftedbynf.goatcounter.com/count"
+    async
+    src="//gc.zgo.at/count.js">
+  </script>
+</body>
+</html>
+
